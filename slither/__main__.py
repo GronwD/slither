@@ -844,7 +844,8 @@ def main_impl(all_detector_classes, all_printer_classes):
     if output_error:
         sys.exit(-1)
     else:
-        my_exit(results_detectors)
+        # my_exit(results_detectors)
+        exit(0)
 
 
 if __name__ == "__main__":
