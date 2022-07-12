@@ -47,7 +47,7 @@ def _handle_import_aliases(
     for symbol_alias in symbol_aliases:
         if (
             "foreign" in symbol_alias
-            and "name" in symbol_alias["foreign"]
+            and (type( symbol_alias["foreign"]) == dict and "name" in symbol_alias["foreign"])
             and "local" in symbol_alias
         ):
             original_name = symbol_alias["foreign"]["name"]
